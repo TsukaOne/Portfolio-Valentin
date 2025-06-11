@@ -1,0 +1,124 @@
+
+.content {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0); 
+  text-align: center;
+  padding: 20px;
+}
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  overflow: hidden;
+}
+#myVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ @font-face {
+            font-family: 'GamerPixelFont';
+            src: url('assets/font/PixelGamer-Regular.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+.animated-title {
+            font-family: 'GamerPixelFont','Orbitron', monospace; /* Remplacez par 'MaPolice' si vous utilisez une TTF locale */
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            
+            /* Animation d'apparition */
+            opacity: 0;
+            transform: translateY(50px) scale(0.8);
+            animation: slideInScale 2s ease-out forwards;
+        }
+
+        /* Animation principale */
+        @keyframes slideInScale {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.8);
+            }
+            50% {
+                opacity: 0.7;
+                transform: translateY(-10px) scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Animation de pulsation continue */
+        .animated-title::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shine 3s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .title-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .typewriter {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
+            margin-top: 2rem;
+            border-right: 3px solid #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typewriter 4s steps(20) forwards, blink 1s infinite;
+        }
+
+        @keyframes typewriter {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 40%;
+            }
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                border-color: #fff;
+            }
+            51%, 100% {
+                border-color: transparent;
+            }
+        }
+
+
