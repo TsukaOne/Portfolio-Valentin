@@ -25,7 +25,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-image: url('/assets/images/ProfilPic.jpg'); 
+    background-image: url('/Portfolio-Valentin/assets/images/ProfilPic.jpg'); 
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -71,7 +71,7 @@
  .tooltip {
     font-family: 'Orbitron';
     font-weight: bold;
-    font-size:20%;
+    font-size:60%;
         position: absolute;
         left: 50%;
         bottom: 100%;
