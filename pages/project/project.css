@@ -166,6 +166,7 @@ body {
 
 .button-more-info{
   display: flex;
+  z-index: 100;
 }
 .menu-item {
     width: 70px;
